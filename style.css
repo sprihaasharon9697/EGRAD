@@ -1,0 +1,206 @@
+:root {
+    --neon: lch(100% 0.01 296.81);
+    font-size: BOLD;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* BACKGROUNDS */
+.index-bg {
+    background: url('pexels-md-nadim-mahmud-2158301177-35385546.jpg') no-repeat center/cover;
+}
+
+.login-bg {
+    background: url('pexels-alexander-suhorucov-6457571.jpg') no-repeat center/cover;
+}
+
+.register-bg {
+    background: url('pexels-ketut-subiyanto-4132310.jpg') no-repeat center/cover;
+}
+
+/* OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);  /* darker overlay for better contrast */
+    backdrop-filter: blur(1.5px);       /* stronger blur 🔥 */
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: -1;
+}
+
+/* HEADER */
+h2 {
+    color: var(--neon);
+    text-shadow: 0 0 15px var(--neon);
+    font-size: 1.7rem;      /* Bigger */
+    font-weight: 700;       /* Bold */
+    color: var(--neon);
+    text-shadow: 
+        0 0 10px var(--neon),
+        0 0 20px var(--neon),
+        0 0 30px var(--neon);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+}
+
+/* BUTTONS */
+.nav-btn {
+    padding: 10px 20px;
+    color: hsl(0, 95%, 55%);
+    font-size: 1.2rem;      /* Bigger */
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    box-shadow: 0 0 10px var(--neon);
+}
+
+/* CONTAINER */
+.container {
+    background: lab(0% 0 0 / 0.749);
+    margin: 60px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+/* INPUT */
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+/* BUTTON */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ccff00, #00ff99);
+    color: black;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 20px #ccff00;
+}
+
+/* DROPDOWN */
+.dropdown { position: relative; }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #111;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+/* EXAM BACKGROUND */
+.exam-bg {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* MAIN EXAM CARD */
+.exam-container {
+    background: white;
+    color: black;
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* SUBJECT TITLE */
+#subjectTitle {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* QUESTION BLOCK */
+.q-block {
+    background: #f4f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #007bff;
+}
+
+/* QUESTION HEADER */
+.q-block p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+/* MARK ALIGN RIGHT */
+.q-block span {
+    float: right;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* OPTIONS */
+.q-block label {
+    display: block;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* HOVER EFFECT */
+.q-block label:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+/* RADIO BUTTON SPACING */
+.q-block input {
+    margin-right: 3px;
+}
+
+/* SUBMIT BUTTON FIX */
+.exam-container .submit-btn {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 100px;
+}
